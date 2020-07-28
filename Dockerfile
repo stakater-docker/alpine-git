@@ -4,4 +4,6 @@ RUN apk add --update \
         bash \
         curl \
     && rm -rf /var/cache/apk/*
+RUN apk add --no-cache ca-certificates && \
+    update-ca-certificates
 CMD ["/bin/bash"]
